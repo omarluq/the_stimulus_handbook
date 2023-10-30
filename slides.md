@@ -12,7 +12,7 @@ title: Stimulus JS
 mdc: true
 ---
 <div class='flex flex-col gap-3 content-center'>
-  <img src="/stimulus-logo.svg" class="rounded shadow h-60" />
+  <img src="/stimulus-logo.svg" class="h-60" />
   <h1> Stimulus Js </h1>
 </div>
 
@@ -79,27 +79,27 @@ export default class GreeterController extends Controller {
 ---
 transition: slide-left
 ---
-<h1>StimulusJS Blessings</h1>
+<h1>StimulusJS APIs</h1>
 <v-clicks>
 <p> 
-  In the world of StimulusJS, <em>blessings</em> refer to a suite of refined features and patterns that enhance the developer experience. These blessings are essentially pre-defined behaviors or functionalities that you can easily apply to your HTML elements, streamlining the process of creating interactive and dynamic web interfaces. They encapsulate common tasks and behaviors, making your code more concise, readable, and maintainable. As of Stimulus 3.2, the Controller class's blessings are:
+In the realm of StimulusJS, there are a set of advanced features and patterns that significantly elevate the developer experience. These features, akin to APIs, offer pre-defined behaviors or functionalities that you can seamlessly integrate into your HTML elements. This streamlines the creation of interactive and dynamic web interfaces.
+By encapsulating common tasks and behaviors, these APIs make your code not only more concise but also easier to read and maintain. As of Stimulus 3.2, the Controller class includes these notable APIs:
 </p>  
-<h2 class='pb-3'>StimulusJS Blessings:</h2>
-<div class='pb-1'><strong>🎨 ClassPropertiesBlessing:</strong> Enables easy manipulation and observation of CSS classes on controller elements.</div>
-<div class='pb-1'><strong>🎯 TargetPropertiesBlessing:</strong> Facilitates the referencing and management of DOM elements as targets within the controller.</div>
-<div class='pb-1'><strong>🔢 ValuePropertiesBlessing:</strong> Simplifies handling of state and data by binding values to controller elements.</div>
-<div class='pb-1'><strong>🔌 OutletPropertiesBlessing:</strong> Allows for enhanced organization of related DOM elements, streamlining complex element interactions.</div>
+<div class='pb-1'><strong>🎨 Classes API:</strong> Enables easy manipulation and observation of CSS classes on controller elements.</div>
+<div class='pb-1'><strong>🎯 Targets API:</strong> Facilitates the referencing and management of DOM elements as targets within the controller.</div>
+<div class='pb-1'><strong>🔢 Values API:</strong> Simplifies handling of state and data by binding values to controller elements.</div>
+<div class='pb-1'><strong>🔌 Outlets API:</strong> Allows for enhanced organization of related DOM elements, streamlining complex element interactions.</div>
 </v-clicks>
 ---
 transition: slide-left
 ---
-<h1>ClassPropertiesBlessing</h1>
+<h1>Classes API</h1>
 <v-clicks>
-<p><code>ClassPropertiesBlessing</code> allows you to define a structured list of CSS class names within your controller. This helps in maintaining a clear connection between your JavaScript and CSS. While it doesn't automatically manage class states based on property changes, it provides a declarative way to handle class names, improving code readability and organization.</p>
+<p><code>Classes API</code> allows you to define a structured list of CSS class names within your controller. This helps in maintaining a clear connection between your JavaScript and CSS. While it doesn't automatically manage class states based on property changes, it provides a declarative way to handle class names, improving code readability and organization.</p>
 
 <div class='flex flex-row gap-5'>
 ```js
-import { Controller } from "stimulus"
+import { Controller } from "@hotwired/stimulus"
 
 export default class ToggleController extends Controller {
   static classes = ["active"]
@@ -130,13 +130,12 @@ export default class ToggleController extends Controller {
 ---
 transition: slide-left
 ---
-<h1>TargetPropertiesBlessing</h1>
+<h1>Targets API</h1>
 <v-clicks>
-<!-- <p>The <code>TargetPropertiesBlessing</code>, or simply <code>Targets</code>, enhances your controller by allowing direct references to specific DOM elements and lifecycle callbacks for those elements. By defining targets, you avoid complex query selectors and ensure a clean separation between your JavaScript and HTML structure. This feature is a cornerstone of Stimulus, promoting clear communication between your controller and its associated elements.</p> -->
-<p>The <code>TargetPropertiesBlessing</code>, or simply <code>Targets</code>, enhances your controller by allowing direct references to specific DOM elements. By defining targets, you avoid complex query selectors and ensure a clean separation between your JavaScript and HTML structure. Moreover, Stimulus provides lifecycle callbacks for each target, giving you precise control over their behavior as they are added to or removed from the DOM.</p>
-<div class='flex flex-row gap-5'>
+<p>The <code>Targets API</code>, enhances your controller by allowing direct references to specific DOM elements. By defining targets, you avoid complex query selectors and ensure a clean separation between your JavaScript and HTML structure. Moreover, Stimulus provides lifecycle callbacks for each target, giving you precise control over their behavior as they are added to or removed from the DOM.</p>
+<div class='flex flex-row gap-5 max-h-fit'>
 ```js
-import { Controller } from "stimulus"
+import { Controller } from "@hotwired/stimulus"
 
 export default class ToggleController extends Controller {
   static classes = ["active"]
@@ -144,19 +143,19 @@ export default class ToggleController extends Controller {
 
   toggleElementTargetConnected(element) {
     this.interval = setInterval(() => {
-      this.toggleElementTarget.classList.toggle(this.activeClass)
+      element.classList.toggle(this.activeClass)
     }, 10000); // Toggles class every 10 seconds
   }
 
-  toggleElementTargetDisconnected(element) {
+  toggleElementTargetDisconnected(_element) {
     clearInterval(this.interval);
   }
 }
 ```
 ```html
 <div data-controller="toggle">
-  <div data-toggle-target="toggleElement">
-    Toggle Element
+  <div data-toggle-target="toggleElement"
+       data-toggle-active-class="highlight">
   </div>
 </div>
 
@@ -166,6 +165,7 @@ export default class ToggleController extends Controller {
     font-weight: bold;
   }
 </style>
+
 ```
 </div>
 </v-clicks>
@@ -173,3 +173,54 @@ export default class ToggleController extends Controller {
 ---
 transition: slide-left
 ---
+<h1>Values API</h1>
+<v-clicks>
+<div>The <code>Values API</code> in Stimulus powers up your controller with state management. This feature links HTML data attributes to JavaScript properties.</div>
+
+<div class='py-2'>Value Properties:</div>
+<div>🔹 <code>[name]Value</code>: Dynamic getter and setter for the value.</div>
+<div>🔹 <code>has[name]Value</code>: Checks if the value is defined.</div>
+<div>🔹 <code>[name]ValueChanged</code>: Callback fired when the value changes.</div>
+<div class='py-2'>Strong Typing: Define the type of data your values should hold. Supported types:</div>
+<div>   🚀 String: For text-based values.</div>
+<div>   🚀 Number: For numerical values.</div>
+<div>   🚀 Boolean: For true/false values.</div>
+<div>   🚀 Array: To hold a list of items.</div>
+<div>   🚀 Object: For structured data in JSON-like format.</div>
+</v-clicks>
+
+---
+transition: slide-left
+---
+<h1>Values API Example</h1>
+<div class='flex flex-row gap-5'>
+```js
+import { Controller } from "@hotwired/stimulus"
+
+export default class TimerController extends Controller {
+  static values = { seconds: Number }
+
+  connect() {
+   if (!this.hasSecondsValue) {
+      this.secondsValue = 0;
+    }
+    this.interval = setInterval(() => {
+      this.secondsValue++;
+    }, 1000);
+  }
+
+  disconnect() {
+    clearInterval(this.interval);
+  }
+
+  secondsValueChanged() {
+    this.element.textContent = `Timer: ${this.secondsValue} seconds`;
+  }
+}
+```
+```html
+<div data-controller="timer"
+     data-timer-seconds-value="0">
+</div>
+```
+</div>
