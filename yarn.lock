@@ -723,50 +723,10 @@
     "@slidev/types" "0.43.7"
     js-yaml "^4.1.0"
 
-"@slidev/theme-bricks@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@slidev/theme-bricks/-/theme-bricks-0.0.2.tgz#4045f6a94a6232cd1b8f5ecdfc77e09f81d9d537"
-  integrity sha512-70mc2kdWuo6ZoMJiEdWScs8Ei4bRfoEGDibVQFiHqbdFd2oWmmCyfWOVwc2j6HAiECENXrsmKJfN8Tc0S4kxTQ==
-  dependencies:
-    "@slidev/types" "^0.22.1"
-    codemirror-theme-vars "^0.1.1"
-    prism-theme-vars "^0.2.2"
-    theme-vitesse "^0.1.12"
-
-"@slidev/theme-default@latest":
-  version "0.21.2"
-  resolved "https://registry.yarnpkg.com/@slidev/theme-default/-/theme-default-0.21.2.tgz#28db9f074cd0b17d19ca6ccd1d4c75db7a24b026"
-  integrity sha512-neUucFs2YrRZZd73QwvLTyRG/o1nerDFUR5t8YAmXVLTMzWfY71flQ6aAhjYf+WjsozYsOHcxi/pZtIzZ4VhTQ==
-  dependencies:
-    "@slidev/types" "^0.22.7"
-    codemirror-theme-vars "^0.1.1"
-    prism-theme-vars "^0.2.2"
-    theme-vitesse "^0.1.12"
-
-"@slidev/theme-seriph@latest":
-  version "0.21.3"
-  resolved "https://registry.yarnpkg.com/@slidev/theme-seriph/-/theme-seriph-0.21.3.tgz#16f7e348876d6a802e058d10d96e0193a58e5097"
-  integrity sha512-cLya6O4hmcLHUhloCMPPoKMLX27Q+8M8pRS82BSsLXVeXTXrlpc3l3glx5VB738p+NQr7FgqFN6H2CXQRoVv9Q==
-  dependencies:
-    "@slidev/types" "^0.22.7"
-    codemirror-theme-vars "^0.1.1"
-    prism-theme-vars "^0.2.2"
-    theme-vitesse "^0.1.12"
-
 "@slidev/types@0.43.7":
   version "0.43.7"
   resolved "https://registry.yarnpkg.com/@slidev/types/-/types-0.43.7.tgz#0ec378cb14f8d3d10f9c7e6355d0483765c5568e"
   integrity sha512-EtX6p5K6neCF7IcnFfq41ASytWANVJlZLhWh+TAtBsNCFCSi694XdD2juF8Z4R1hVXrRxBMyMUwLZM/OxgU1og==
-
-"@slidev/types@^0.22.1", "@slidev/types@^0.22.7":
-  version "0.22.7"
-  resolved "https://registry.yarnpkg.com/@slidev/types/-/types-0.22.7.tgz#abe1c81fedd5db1475428832f65253f95722a6d8"
-  integrity sha512-mCVKQbcGTv6d6n9aHpYNp5U04HF+FMbpY083vqpJ6Folc805BB1Am02eubaW0J6nM+dSOu2dDgPY+kIjs75sAQ==
-
-"@slidev/types@^0.28.6":
-  version "0.28.10"
-  resolved "https://registry.yarnpkg.com/@slidev/types/-/types-0.28.10.tgz#31a6cbe9321b66424206be6cedaff300e80b10d6"
-  integrity sha512-XcJ12giBaeSHxImlYuDfO1XW686kWDq4uoftnPZyIxhNew4FREsbOLY8oG5Nz5qn05qSsnSDQGo55EbantKvfg==
 
 "@slidev/types@^0.42.5":
   version "0.42.11"
@@ -1563,7 +1523,7 @@ cliui@^8.0.1:
     strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
 
-codemirror-theme-vars@^0.1.1, codemirror-theme-vars@^0.1.2:
+codemirror-theme-vars@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/codemirror-theme-vars/-/codemirror-theme-vars-0.1.2.tgz#60db6877d16a400809e919b9bec33d72dbab1dfa"
   integrity sha512-WTau8X2q58b0SOAY9DO+iQVw8JKVEgyQIqArp2D732tcc+pobbMta3bnVMdQdmgwuvNrOFFr6HoxPRoQOgooFA==
@@ -3659,7 +3619,7 @@ prettier@^3.0.3:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.0.3.tgz#432a51f7ba422d1469096c0fdc28e235db8f9643"
   integrity sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==
 
-prism-theme-vars@^0.2.2, prism-theme-vars@^0.2.4:
+prism-theme-vars@^0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/prism-theme-vars/-/prism-theme-vars-0.2.4.tgz#c92b8747a70ced8675538454900f88f08d053558"
   integrity sha512-B3Pht+GCT87sZph7hMRLlCQXzCM0awW7Rhk08RavpqRW4LEQOeqN0uMG4QCWkul2tr8PB61YAOJGUrEW+1uuJA==
@@ -3890,16 +3850,6 @@ slash@^4.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-4.0.0.tgz#2422372176c4c6c5addb5e2ada885af984b396a7"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
 
-slidev-theme-codeg@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/slidev-theme-codeg/-/slidev-theme-codeg-0.1.1.tgz#d993321032e2648c1537daa941f060b38254d12e"
-  integrity sha512-zwQAvdjVROi8f14JMoDudqmf6vLCwcpnagGvlwvJSf0asVKLsQks3ZSnNChLkG7rJEjjx1brjLiV8WvQSM8OeA==
-  dependencies:
-    "@slidev/types" "^0.28.6"
-    codemirror-theme-vars "^0.1.1"
-    prism-theme-vars "^0.2.2"
-    theme-vitesse "^0.1.14"
-
 slidev-theme-dracula@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/slidev-theme-dracula/-/slidev-theme-dracula-0.2.0.tgz#15802c504e8d7dc58db9d3d80138b39e9595d984"
@@ -4034,11 +3984,6 @@ tar@^6.2.0:
     minizlib "^2.1.1"
     mkdirp "^1.0.3"
     yallist "^4.0.0"
-
-theme-vitesse@^0.1.12, theme-vitesse@^0.1.14:
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/theme-vitesse/-/theme-vitesse-0.1.14.tgz#e239d44fb0e61b3d0471fc86784b22e8b632dc96"
-  integrity sha512-b5s+Zpfaw5+djoCJ9AEbcTbpiTlLsOvGM9oblDmmWRGWNqg9oXtEYO/uwubwx77novHBI6zNuwZRHKNlAIBo4A==
 
 theme-vitesse@^0.7.2:
   version "0.7.3"
