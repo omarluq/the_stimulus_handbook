@@ -76,6 +76,7 @@ export default class GreeterController extends Controller {
 ```
 </div>
 </v-clicks>
+
 ---
 transition: slide-left
 ---
@@ -224,3 +225,41 @@ export default class TimerController extends Controller {
 </div>
 ```
 </div>
+
+---
+transition: slide-left
+---
+<h1>Outlets API</h1>
+
+---
+transition: slide-left
+---
+<h1>Actions</h1>
+
+---
+transition: slide-left
+---
+<h1> Controller Life Cycle Diagram </h1>
+
+```mermaid  {scale: 0.5}
+sequenceDiagram
+    participant P as Page
+    participant C as Controller
+    participant T as Targets
+    participant A as Actions
+    participant V as Values
+
+    P->>+C: Load and initialize
+    C->>P: Watch for controller element
+    P->>C: Controller element connected to DOM
+    C-->>T: Watch targets
+    C-->>A: Listen to actions
+    C-->>V: Monitor values
+    T-->>C: Target connected to DOM
+    A-->>C: Action triggered
+    V-->>C: Value changed
+    T-->>C: Target disconnected from DOM
+    C->>P: Update state/view
+    P->>C: Controller element disconnected from DOM
+    C->>P: Update state/view
+```
