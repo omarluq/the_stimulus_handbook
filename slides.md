@@ -210,7 +210,7 @@ export default class ToggleController extends Controller {
 ```
 ```html
 <div data-controller="toggle">
-  <div data-toggle-target="toggleElement"
+  <div data-toggle-target="toggle-element"
        data-toggle-active-class="highlight">
   </div>
 </div>
