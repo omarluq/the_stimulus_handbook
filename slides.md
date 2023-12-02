@@ -21,7 +21,7 @@ transition: slide-left
 ---
 <h1> What is StimulusJS </h1>
 <v-clicks>
-<p> Stimulus is a lightweight and minimalistic JavaScript framework. Instead of focusing on HTML rendering, it boosts your current HTML elements by leveraging data attributes. </p>
+<p> Stimulus is a lightweight and minimalistic JavaScript framework. Instead of focusing on HTML rendering, it boosts HTML elements by leveraging data attributes. </p>
 
 <div class='pb-2'><span style="color: #007bff;">💡</span> <strong>Flexibility:</strong> Unlike many other frameworks that come with a heavy set of rules and structures, Stimulus takes a more flexible approach.</div>
 <div class='pb-2'><span style="color: #28a745;">🌐</span> <strong>HTML Enhancement:</strong> Its basic concept is to enhance existing HTML. Instead of requiring developers to rewrite or replace their HTML, Stimulus augments it, tapping into the power of data attributes.</div>
@@ -51,7 +51,7 @@ transition: slide-left
 <span style="color: #007bff;">🔧</span> <strong>Installation:</strong>
 </div>
 <div class='pb-2'>
-1. Install with NPM or any other tool of your choice
+1. Install with NPM or any other tool supported
 </div>
 <div class='pb-2'>
 ```bash
@@ -59,7 +59,7 @@ npm install @hotwired/stimulus
 ```
 </div>
 <div class='pb-2'>
-2. After installing, import and initialize Stimulus in your main JavaScript file:
+2. After installing, import and initialize Stimulus in the main JavaScript file:
 </div>
 <div class='pb-2'>
 ```js
@@ -70,7 +70,7 @@ window.Stimulus = Application.start()
 ```
 </div>
 <div class='pb-2'>
-1. Create your first Controller and Register it
+1. Create Controller and Register it
 </div>
 <div class='pb-2 flex flex-row gap-3'>
 ```js
@@ -102,13 +102,13 @@ transition: slide-left
 <p>Controllers are basic organizational units that provide the primary means of adding behavior to HTML elements.</p>
 <div class='list-none text-sm'>
   <li class='pb-2'>
-    <span style="font-weight: bold; color: #007bff;">&#9679; Connection to HTML:</span> Controllers are JavaScript classes that connect to HTML elements via data attributes, providing a clear and structured connection between your HTML and JavaScript.
+    <span style="font-weight: bold; color: #007bff;">&#9679; Connection to HTML:</span> Controllers are JavaScript classes that connect to HTML elements via data attributes, providing a clear and structured connection between HTML and JavaScript.
   </li>
   <li class='pb-2'>      
-    <span style="font-weight: bold; color: #28a745;">&#9679; Lifecycle:</span> Each controller has lifecycle callbacks like <code>connect()</code> and <code>disconnect()</code>, allowing you to set up and tear down your JavaScript code in an organized way.
+    <span style="font-weight: bold; color: #28a745;">&#9679; Lifecycle:</span> Each controller has lifecycle callbacks, <code>connect()</code> and <code>disconnect()</code>, allowing the set up and tear down of JavaScript code in an organized way.
   </li>
   <li class='pb-2'>      
-    <span style="font-weight: bold; color: #dc3545;">&#9679; Reusability:</span> Controllers can be reused across your application, leading to more maintainable and module code.
+    <span style="font-weight: bold; color: #dc3545;">&#9679; Reusability:</span> Controllers can be reused across an application, leading to more maintainable and module code.
   </li>
 </div>
 <div class='flex flex-row gap-5 pt-1'>
@@ -137,13 +137,13 @@ transition: slide-left
 <h1>StimulusJS APIs</h1>
 <v-clicks>
 <p> 
-In the realm of StimulusJS, there are a set of advanced features and patterns that significantly elevate the developer experience. These features, akin to APIs, offer pre-defined behaviors or functionalities that you can seamlessly integrate into your HTML elements. This streamlines the creation of interactive and dynamic web interfaces.
-By encapsulating common tasks and behaviors, these APIs make your code not only more concise but also easier to read and maintain. As of Stimulus 3.2, the Controller class includes these notable APIs:
+In the realm of StimulusJS, there are a set of advanced features and patterns that significantly elevate the developer experience. These features, akin to APIs, offer pre-defined behaviors or functionalities that can seamlessly integrate into HTML elements. This streamlines the creation of interactive and dynamic web interfaces.
+By encapsulating common tasks and behaviors, these APIs make code not only more concise but also easier to read and maintain. As of Stimulus 3.2, the Controller class includes these notable APIs:
 </p>  
-<div class='pb-1'><strong>🎨 Classes API:</strong> Streamlines the manipulation of CSS classes on controller elements.</div>
-<div class='pb-1'><strong>🎯 Targets API:</strong> Facilitates the referencing and management of DOM elements as targets within the controller.</div>
-<div class='pb-1'><strong>🔢 Values API:</strong> Simplifies data management and transfer between your HTML and JavaScript.</div>
-<div class='pb-1'><strong>⚡ Actions API:</strong> Enables the binding of JavaScript functions to DOM events directly in the HTML markup.</div>
+<div class='pb-1'><strong>🎨 Classes API:</strong> Streamlines CSS classes manipulation on controller elements.</div>
+<div class='pb-1'><strong>🎯 Targets API:</strong> Facilitates DOM elements referencing and management as targets within a controller.</div>
+<div class='pb-1'><strong>🔢 Values API:</strong> Simplifies data management and transfer between HTML and JavaScript.</div>
+<div class='pb-1'><strong>⚡ Actions API:</strong> Enables the binding of JavaScript functions to DOM events directly in HTML markup.</div>
 <div class='pb-1'><strong>🔌 Outlets API:</strong> Allows for cross-controller communication and coordination.</div>
 </v-clicks>
 ---
@@ -151,7 +151,7 @@ transition: slide-left
 ---
 <h1>Classes API</h1>
 <v-clicks>
-<p><code>Classes API</code> allows you to define a structured list of CSS class names within your controller. This helps in maintaining a clear connection between your JavaScript and CSS. While it doesn't automatically manage class states based on property changes, it provides a declarative way to handle class names, improving code readability and organization.</p>
+<p><code>Classes API</code> allows to define a structured list of CSS class names within a controller. This helps in maintaining a clear connection between JavaScript and CSS. While it doesn't automatically manage class states based on property changes, it provides a declarative way to handle class names, improving code readability and organization.</p>
 
 <div class='flex flex-row gap-5'>
 ```js
@@ -188,7 +188,7 @@ transition: slide-left
 ---
 <h1>Targets API</h1>
 <v-clicks>
-<p>The <code>Targets API</code>, enhances your controller by allowing direct references to specific DOM elements. By defining targets, you avoid complex query selectors and ensure a clean separation between your JavaScript and HTML structure. Moreover, Stimulus provides lifecycle callbacks for each target, giving you precise control over their behavior as they are added to or removed from the DOM.</p>
+<p>The <code>Targets API</code>, enhances controllers by allowing direct references to specific DOM elements. By defining targets, we avoid complex query selectors and ensure a clean separation between JavaScript and HTML structure. Moreover, Stimulus provides lifecycle callbacks for each target, which gives precise control over their behavior as they are added to or removed from the DOM.</p>
 <div class='flex flex-row gap-5 max-h-fit'>
 ```js
 import { Controller } from "@hotwired/stimulus"
@@ -231,24 +231,22 @@ transition: slide-left
 ---
 <h1>Values API</h1>
 <v-clicks>
-<div>The <code>Values API</code> in Stimulus powers up your controller with state management. This feature links HTML data attributes to JavaScript properties.</div>
+<div>The <code>Values API</code> in Stimulus powers up controllers with data management. This feature links HTML data attributes to JavaScript properties.</div>
 
-<div class='py-2'>Types: Define the type of data your values should hold. Supported types:
-  <div class='list-none text-sm'>
-    <li>🚀 String: For text-based values.</li>
-    <li>🚀 Number: For numerical values.</li>
-    <li>🚀 Boolean: For true/false values.</li>
-    <li>🚀 Array: To hold a list of items.</li>
-    <li>🚀 Object: For structured data in JSON-like format.</li>
-  </div>
+<div class='py-2'><strong>Types</strong>: <div class='text-sm'>Define the type of data values should hold. Supported types: <code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Array</code>, <code>Object</code></div>
 </div>
 
-<div class='py-2'>Value Properties:
+<div class='py-2'><strong>Value Properties:</strong>
   <div class='list-none text-sm'>
     <div>🔹 <code>[name]Value</code> Getter for the value.</div>
     <div>🔹 <code>[name]Value=</code> Setter for the value.</div>
     <div>🔹 <code>has[name]Value</code> Existential property for a value evaluates to true when the associated data attribute is present on the controller’s element and false when it is absent.</div>
   </div>
+</div>
+
+<div class='py-2'>
+  <strong>Change Callbacks</strong>:
+  <div class='text-sm'>Define a method <code>[name]ValueChanged</code> in the controller, where [name] is the name of the value to be observed for changes.</div>
 </div>
 </v-clicks>
 
@@ -298,19 +296,19 @@ transition: slide-up
 ---
 <h1>Outlets API</h1>
 <v-clicks>
-<p>The <code>Outlets API</code> in StimulusJS let you reference controller instances and their associated elements from within another Controller by using CSS selectors. They are conceptually similar to Targets but with the difference that they reference a controller instance. They are meant to help with cross-controller communication and coordination</p>
+<p>The <code>Outlets API</code> allows referencing controller instances and their associated elements from within another Controller by using CSS selectors. It is conceptually similar to the <code>Targets API</code> but with the difference that they reference a controller instance. Outlets are meant to help with cross-controller communication and coordination</p>
 
-<div class='pb-2'><span style="color: #007bff;">🔌</span> <strong>Defining Outlets:</strong> Declare outlets in your controller using the `static outlets` array. This declares which other controller identifiers can be used as outlets on this controller.</div>
-<div class='pb-2'><span style="color: #28a745;">🎯</span> <strong>HTML Setup:</strong> Use `data-[identifier]-[outlet]-outlet` attributes in your HTML and its value is as a CSS selector which you can use to refer to other controller elements defined as outlets on the host controller.  The outlet identifier in the host controller must be the same as the target controller’s identifier.
+<div class='pb-2'><span style="color: #007bff;">🔌</span> <strong>Defining Outlets:</strong> <span class='text-sm'>Declare outlets in a controller using the <code>static outlets</code> array. This declares which other controller identifiers can be used as outlets on this controller.</span></div>
+<div class='pb-2'><span style="color: #28a745;">🎯</span> <strong>HTML Setup:</strong> <span class='text-sm'>Use <code>data-[identifier]-[outlet]-outlet</code> attributes in the HTML and its value is as a CSS selector which can be used to refer to other controller elements defined as outlets on the host controller.  The outlet identifier in the host controller must be the same as the target controller’s identifier.</span>
 </div>
-<div class='pb-2'><span style="color: #dc3545;">🔗</span> <strong>Properties:</strong> For each outlet defined in the static outlets array, Stimulus adds five properties to your controller, where [name] corresponds to the outlet’s controller identifier:
-<ul class='list-disc list-inside text-sm'>
-  <li><strong>has[Name]Outlet:</strong> Checks if a [name] outlet is present in the controller and return a Boolean.</li>
-  <li><strong>[name]Outlet:</strong> Returns the Controller instance of the first [name] outlet. Throws an exception if not present.</li>
-  <li><strong>[name]Outlets:</strong> Returns an Array of all Controller instances of the [name] outlets.</li>
-  <li><strong>[name]OutletElement:</strong> Returns the DOM element of the first [name] outlet. Throws an exception if not present.</li>
-  <li><strong>[name]OutletElements:</strong> Returns an Array of DOM elements of all [name] outlets.</li>
-</ul>
+<div class='pb-2'><span style="color: #dc3545;">🔗</span> <strong>Properties:</strong><span class='text-sm'> For each outlet defined in the static outlets array, Stimulus adds five properties to the controller, where [name] corresponds to the outlet’s controller identifier:</span>
+<div class='list-none list-inside text-sm'>
+  <li><code>has[Name]Outlet</code> Checks if a [name] outlet is present in the controller and return a Boolean.</li>
+  <li><code>[name]Outlet</code> Returns the Controller instance of the first [name] outlet. Throws an exception if not present.</li>
+  <li><code>[name]Outlets</code> Returns an Array of all Controller instances of the [name] outlets.</li>
+  <li><code>[name]OutletElement</code> Returns the DOM element of the first [name] outlet. Throws an exception if not present.</li>
+  <li><code>[name]OutletElements</code> Returns an Array of DOM elements of all [name] outlets.</li>
+</div>
 </div>
 
 </v-clicks>
@@ -318,8 +316,9 @@ transition: slide-up
 ---
 transition: slide-left
 ---
-<div class='pb-2'><span style="color: #007bff;">☎️</span> <strong>Outlet callbacks:</strong> Outlet callbacks are specially named functions called by Stimulus to let you respond to whenever an outlet is added or removed from the page. To observe outlet changes, define a function named [name]OutletConnected() or [name]OutletDisconnected().
-
+<div class='pb-2'>
+  <span style="color: #007bff;">☎️</span> <strong>Outlet callbacks:</strong>
+  <p class='text-sm'> Outlet callbacks are specially named functions called by Stimulus to handle responding to whenever an outlet is added or removed from the page. To observe outlet changes, define a function named <code>[name]OutletConnected()</code> or <code>[name]OutletDisconnected()</code> </p>
 </div>
 <v-clicks>
 </v-clicks>
