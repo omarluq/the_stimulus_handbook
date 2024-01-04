@@ -80,7 +80,7 @@ npm install @hotwired/stimulus
 ```
 </div>
 <div class='pb-2'>
-1. After installing, import and initialize Stimulus in the main JavaScript file:
+2. After installing, import and initialize Stimulus in the main JavaScript file:
 </div>
 <div class='pb-2'>
 ```js
@@ -91,7 +91,7 @@ window.Stimulus = Application.start()
 ```
 </div>
 <div class='pb-2'>
-1. Create Controller and Register it
+3. Create Controller and Register it
 </div>
 <div class='pb-2 flex flex-row gap-3'>
 ```js
