@@ -18,7 +18,7 @@ This handbook is packed with slides that will walk you through the essentials of
 
 # How to Use This Handbook
 
-- **Take it slow**: Each slide is designed to be bite-sized. No rush. 🐢
+- **Take it slow**: No rush. 🐢
 - **Play around**: We’ve got examples and code snippets. Tinker with them as much as you like. 🔧
 - **Ask questions**: Got stuck? Just imagine we’re sitting next to you and ask away. (We love questions!) 💭
 
